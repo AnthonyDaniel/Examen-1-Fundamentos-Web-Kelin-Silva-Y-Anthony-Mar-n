@@ -10,14 +10,14 @@ var Blog = {
     url4:"https://firebasestorage.googleapis.com/v0/b/trip-9357d.appspot.com/o/screencapture-mimercadito-cr-1599828414533.png?alt=media&token=2075d56b-9e9b-4843-b46a-75adb47a743b",
     content4:"Una de las paginas que usa una logica similar, pero con una versión de este metodo mejorado es el mejor E-Commerce de Costa Rica, ",
     content5: "Este sitio MiMercadito, esta en una resolución de 8K, y si lo comparamos con el E-Commerce pasado, podemos notar una gran diferencia en la legibilidad del sitio. Los invito a mejorar este metodo y usarlos en sus proximos proyectos. ",
-    urlvideo: "8"
+    urlvideo: `<iframe width="560" height="315" src="https://www.youtube.com/embed/F7Xa0Avm4So" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
 }
 
 loadBlog();
 
 function loadBlog() {
 
-    var title, description, content1, urlImg, urlImg2, urlImg3, urlImg4, content3, content5, content4;
+    var title, description, content1, urlImg, urlImg2, urlImg3, urlImg4, content3, content5, content4, urlVideo;
 
     urlImg = document.getElementById("img");
     urlImg.innerHTML = `<img id="img" src="` + Blog.url + `" alt="" />`;
@@ -52,5 +52,7 @@ function loadBlog() {
     urlImg4 = document.getElementById("img4");
     urlImg4.innerHTML = `<img class="img-fluid" id="img" src="` + Blog.url4 + `" alt="" />`;
 
+    urlVideo = document.getElementById("urlVideo");
+    urlVideo.innerHTML = Blog.urlvideo;
 
 }
